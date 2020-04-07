@@ -19,6 +19,7 @@ INSERT INTO dbo.msk_columns (TableId, ColumnName) VALUES (1,'OrganizationName'),
 
 DECLARE @TableName VARCHAR(250) 
 DECLARE @TableKey VARCHAR(100) 
+DECLARE @Collate VARCHAR(100) = ''
 DECLARE @TableId INT 
 DECLARE @Columns TABLE (ColumnName VARCHAR(100))
 DECLARE @BatchSize INT = 10000
