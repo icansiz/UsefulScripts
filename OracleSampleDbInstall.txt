@@ -1,0 +1,4 @@
+// Oracle Express Sample DB installation
+sqlplus sysadmin
+SQL >alter session set "_ORACLE_SCRIPT"=true;
+SQL >@hr_install.sql;
