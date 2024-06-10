@@ -9,3 +9,6 @@ docker container prune
 // restart all containers
 docker restart $(docker ps -a -q)
 
+// copy file from host to conainer
+docker cp /usr/oracle/oracle-sample-database.zip 0ba992c506fd:/home/oracle
+
