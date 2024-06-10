@@ -6,3 +6,6 @@ docker ps -a|grep Exited|cut -f 1 -d " "
 // Remove all stopped containers
 docker container prune
 
+// restart all containers
+docker restart $(docker ps -a -q)
+
