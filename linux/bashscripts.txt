@@ -1,1 +1,12 @@
+sudo nano /etc/systemd/system/my-app.service
 
+[Unit] Description=My .NET Application Service After=network.target 
+[Service] ExecStart=/usr/bin/dotnet /var/www/my-app/MyWebApp.dll WorkingDirectory=/var/www/my-app Restart=always RestartSec=10 KillSignal=SIGINT User=www-data Environment=ASPNETCORE_ENVIRONMENT=Production [Install] WantedBy=multi-user.target
+
+sudo systemctl enable servis_adiniz.service (boot sırasında servisin açılması için)
+sudo systemctl daemon-reload
+sudo systemctl enable nizam.service
+sudo systemctl start nizam.service
+
+# servis loglarini sondan basa dogru izle
+sudo journalctl -u nizam.service -r
